@@ -55,7 +55,7 @@ public class werkitSeleniumTests {
 
     @AfterEach
     void teardown() throws InterruptedException {
-        Thread.sleep(Duration.ofSeconds(10).toMillis());
+        Thread.sleep(Duration.ofSeconds(2).toMillis());
 
         driver.quit();
     }
@@ -78,7 +78,7 @@ public class werkitSeleniumTests {
         actions.pause(3);
         homeBtn.click();
         String siteURL = driver.getCurrentUrl();
-        assertThat(siteURL).isEqualTo("https://staging.tiered-planet.net/");
+        assertThat(siteURL).isEqualTo("https://staging.tiered-planet.net/werk-it");
     }
     @Test
     void testLoginButton (){
@@ -88,7 +88,7 @@ public class werkitSeleniumTests {
         actions.pause(3);
         loginBtn.click();
         String siteURL = driver.getCurrentUrl();
-        assertThat(siteURL).isEqualTo("https://staging.tiered-planet.net/login");
+        assertThat(siteURL).isEqualTo("https://staging.tiered-planet.net/werk-it/login");
     }
     @Test
     void testExercisesButton() {
@@ -98,7 +98,7 @@ public class werkitSeleniumTests {
         actions.pause(3);
         exercisesBtn.click();
         String siteURL = driver.getCurrentUrl();
-        assertThat(siteURL).isEqualTo("https://staging.tiered-planet.net/exercises");
+        assertThat(siteURL).isEqualTo("https://staging.tiered-planet.net/werk-it/exercises");
     }
     @Test
     void testNutritionButton() {
@@ -108,7 +108,7 @@ public class werkitSeleniumTests {
         actions.pause(3);
         nutritionBtn.click();
         String siteURL = driver.getCurrentUrl();
-        assertThat(siteURL).isEqualTo("https://staging.tiered-planet.net/nutrition");
+        assertThat(siteURL).isEqualTo("https://staging.tiered-planet.net/werk-it/nutrition");
     }
     @Test
     void testCreateProfileButton() {
@@ -118,7 +118,7 @@ public class werkitSeleniumTests {
         actions.pause(3);
         registerBtn.click();
         String siteURL = driver.getCurrentUrl();
-        assertThat(siteURL).isEqualTo("https://staging.tiered-planet.net/register");
+        assertThat(siteURL).isEqualTo("https://staging.tiered-planet.net/werk-it/register");
     }
 
     @Test

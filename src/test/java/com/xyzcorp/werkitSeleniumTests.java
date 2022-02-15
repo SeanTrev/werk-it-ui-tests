@@ -39,6 +39,7 @@ public class werkitSeleniumTests {
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
         driver = new ChromeDriver(options);
+        driver.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
     }
 
     @BeforeEach
